@@ -87,7 +87,7 @@ open System.Threading.RateLimiting
                                 if containsOnItsOwn ":>" then
                                     do! tryReact "wallace" "https://cdn.discordapp.com/emojis/960527234278510632.webp?size=20&quality=lossless"
                                 let oCount = Seq.filter ((=) 'o') content |> Seq.length
-                                if containsOnItsOwn ":o" || float oCount / content.Length > 0.8 then
+                                if containsOnItsOwn ":o" || float oCount / float content.Length > 0.8 then
                                     do! tryReact "wallaceO" "https://cdn.discordapp.com/emojis/971743699753140244.webp?size=20&quality=lossless"
                                 if containsOnItsOwn ":<" then
                                     do! tryReact "wallacent" "https://cdn.discordapp.com/emojis/961550530965045298.webp?size=20&quality=lossless"
