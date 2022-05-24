@@ -17,10 +17,9 @@ jobs:
         env:
           COMMAND_CHANNEL_ID: ${{ secrets.COMMAND_CHANNEL_ID }}
           COMMAND_GUILD_ID: ${{ secrets.COMMAND_GUILD_ID }}
-          WHITELISTED_GUILD_ID: ${{ secrets.WHITELISTED_GUILD_ID }}
+          TARGET_FRESHMEN_GUILD_ID: ${{ secrets.TARGET_FRESHMEN_GUILD_ID }}
           LOG_CHANNEL_ID: ${{ secrets.LOG_CHANNEL_ID }}
           TOKEN: ${{ secrets.TOKEN }}
-          WEBHOOK1: ${{ secrets.WEBHOOK1 }}
-          WEBHOOK2: ${{ secrets.WEBHOOK2 }}
+          LOG_WEBHOOK: ${{ secrets.LOG_WEBHOOK }}
         run: dotnet fsi Bot.fsx
       - uses: gautamkrishnar/keepalive-workflow@master # prevent GitHub from suspending this action due to repository inactivity
