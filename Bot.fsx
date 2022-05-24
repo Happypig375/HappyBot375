@@ -82,7 +82,7 @@ open System.Threading.RateLimiting
                                             let! _ = client.SendMessageAsync(args.Message.Channel.Id, MessageProperties(Content = fallbackImageUrl))
                                             ()
                                 }
-                                if contains "mark" || contains "cag" || contains "cag2" then
+                                if contains "mark" || contains "cag" || containsOnItsOwn "4.3" then
                                     do! tryReact "mark" "https://cdn.discordapp.com/emojis/978324790337228800.webp?size=20&quality=lossless"
                                 if contains "kram" then
                                     do! tryReact "kram" "https://cdn.discordapp.com/emojis/978690377710207050.webp?size=20&quality=lossless"
