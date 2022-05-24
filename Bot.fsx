@@ -84,6 +84,8 @@ open System.Threading.RateLimiting
                                 }
                                 if contains "mark" || contains "cag" || contains "cag2" then
                                     do! tryReact "mark" "https://cdn.discordapp.com/emojis/978324790337228800.webp?size=20&quality=lossless"
+                                if contains "kram" then
+                                    do! tryReact "kram" "https://cdn.discordapp.com/emojis/978690377710207050.webp?size=20&quality=lossless"
                                 if containsOnItsOwn ":>" then
                                     do! tryReact "wallace" "https://cdn.discordapp.com/emojis/960527234278510632.webp?size=20&quality=lossless"
                                 let oCount = Seq.filter ((=) 'o') content |> Seq.length
