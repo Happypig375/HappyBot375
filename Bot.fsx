@@ -46,9 +46,9 @@ open System.Threading.RateLimiting
         let client = new Gateway.DiscordSocketClient()
         client.Login token
         let emojisRateLimiter = new FixedWindowRateLimiter(FixedWindowRateLimiterOptions(1, QueueProcessingOrder.NewestFirst, 0, System.TimeSpan.FromSeconds 15.))
-        let reactRateLimiter = new FixedWindowRateLimiter(FixedWindowRateLimiterOptions(1, QueueProcessingOrder.NewestFirst, 20, System.TimeSpan.FromSeconds 5.))
+        let reactRateLimiter = new FixedWindowRateLimiter(FixedWindowRateLimiterOptions(1, QueueProcessingOrder.NewestFirst, 30, System.TimeSpan.FromSeconds 3.))
         let messageRateLimiter = new FixedWindowRateLimiter(FixedWindowRateLimiterOptions(1, QueueProcessingOrder.NewestFirst, 0, System.TimeSpan.FromSeconds 5.))
-        let reactCheckRateLimiter = new FixedWindowRateLimiter(FixedWindowRateLimiterOptions(1, QueueProcessingOrder.NewestFirst, 10, System.TimeSpan.FromSeconds 2.))
+        let reactCheckRateLimiter = new FixedWindowRateLimiter(FixedWindowRateLimiterOptions(1, QueueProcessingOrder.NewestFirst, 50, System.TimeSpan.FromSeconds 2.))
         let mutable emojis = Array.empty :> System.Collections.Generic.IReadOnlyList<DiscordEmoji>
         let mutable messageReceivedHandler = fun _ _ -> ()
         let mutable reactionAddedHandler = fun _ _ -> ()
