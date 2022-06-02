@@ -21,5 +21,5 @@ jobs:
           LOG_CHANNEL_ID: ${{ secrets.LOG_CHANNEL_ID }}
           TOKEN: ${{ secrets.TOKEN }}
           LOG_WEBHOOK: ${{ secrets.LOG_WEBHOOK }}
-        run: dotnet fsi Bot.fsx
+        run: echo hi # dotnet fsi Bot.fsx
       - uses: gautamkrishnar/keepalive-workflow@master # prevent GitHub from suspending this action due to repository inactivity
